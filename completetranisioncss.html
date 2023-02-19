@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete transition</title>
+
+    <style>
+        .box {
+            width: 120px;
+            height: 50px;
+            background-color: red;
+            transition: background-color 0.5s;
+        }
+
+        .box:hover {
+            background-color: blue;
+        }
+
+        .box1 {
+            width: 120px;
+            height: 50px;
+            background-color: red;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+
+        .box1:hover {
+            opacity: 0.5;
+        }
+
+
+        .box2 {
+            width: 160px;
+            height: 50px;
+            background-color: red;
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .box2.large {
+            width: 400px;
+            height: 400px;
+        }
+
+        .box3 {
+            width: 150px;
+            height: 50px;
+            border: 2px solid red;
+            transition: border-color 0.5s;
+        }
+
+        .box3:hover {
+            border-color: blue;
+        }
+
+
+        .box4 {
+            width: 120px;
+            height: 50px;
+            border: 2px solid red;
+            transition: border-width 0.5s;
+        }
+
+        .box4:hover {
+            border-width: 10px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            transition: border-spacing 0.5s;
+        }
+
+        table:hover {
+            border-spacing: 50px;
+        }
+
+
+        .box5 {
+            position: relative;
+            bottom: 0;
+            transition: bottom 0.5s;
+        }
+
+        .box5:hover {
+            bottom: 50px;
+        }
+
+
+        .box6 {
+            position: relative;
+            width: 120px;
+            height: 50px;
+            background-color: red;
+            clip: rect(0, 200px, 200px, 0);
+            transition: clip 0.5s;
+        }
+
+        .box6:hover {
+            clip: rect(50px, 150px, 150px, 50px);
+        }
+
+        .box7 {
+            width: 120px;
+            height: 50px;
+            color: red;
+            transition: color 0.5s;
+        }
+
+        .box7:hover {
+            color: blue;
+        }
+
+        .box8 {
+            font-size: 20px;
+            transition: font-size 0.5s;
+        }
+
+        .box8:hover {
+            font-size: 30px;
+        }
+
+        .box9 {
+            font-weight: normal;
+            transition: font-weight 0.5s;
+        }
+
+        .box9:hover {
+            font-weight: bold;
+        }
+
+        .box10 {
+            width: 200px;
+            height: 200px;
+            transition: height 0.5s;
+        }
+
+        .box10:hover {
+            height: 100px;
+        }
+
+
+        .box11 {
+            position: relative;
+            left: 0;
+            transition: left 0.5s;
+        }
+
+        .box11:hover {
+            left: 50px;
+        }
+
+
+        .box12 {
+            font-size: 20px;
+            letter-spacing: 1px;
+            transition: letter-spacing 0.5s;
+        }
+
+        .box12:hover {
+            letter-spacing: 3px;
+        }
+
+        .box13 {
+            width: 120px;
+            height: 50px;
+            padding: 20px;
+            background-color: red;
+            transition: padding 0.5s;
+        }
+
+        .box13:hover {
+            padding: 50px;
+        }
+
+        .box14 {
+            position: relative;
+            right: 0;
+            transition: right 0.5s;
+        }
+
+        .box14:hover {
+            right: 50px;
+        }
+
+        .box15 {
+            text-indent: 0;
+            transition: text-indent 0.5s;
+        }
+
+        .box15:hover {
+            text-indent: 50px;
+        }
+
+        .box16 {
+            text-shadow: none;
+            transition: text-shadow 0.5s;
+        }
+
+        .box16:hover {
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .box17 {
+            position: relative;
+            top: 0;
+            transition: top 0.5s;
+        }
+
+        .box17:hover {
+            top: 50px;
+        }
+
+        .box18 {
+            width: 120px;
+            height: 50px;
+            transition: width 0.5s;
+        }
+
+        .box18:hover {
+            width: 300px;
+        }
+
+        .box19 {
+            font-size: 20px;
+            word-spacing: 1px;
+            transition: word-spacing 0.5s;
+        }
+
+        .box19:hover {
+            word-spacing: 139px;
+        }
+    </style>
+
+    <!-- Width and height transition on click: script-->
+    <script>
+        function toggleSize() {
+            var box = document.querySelector('.box');
+            box.classList.toggle('large');
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Background color transition on hover: -->
+    <p>Background color transition on hover:</p>
+    <div class="box">
+        Hover over me
+    </div>
+
+    <br>
+    <hr>
+
+    <!--Opacity transition on hover:-->
+    <p>Opacity transition on hover:</p>
+    <div class="box1">
+        Hover over me
+    </div>
+    <br>
+    <hr>
+
+    <!-- Width and height transition on click: -->
+    <p>Width and height transition on click:</p>
+    <div class="box2" onclick="toggleSize()">
+        Click me to toggle size
+    </div>
+    <br>
+    <hr>
+
+    <!-- border-color -->
+    <p>border-color</p>
+    <div class="box3">
+        Hover over me
+    </div>
+    <br>
+    <hr>
+
+
+    <!-- border-width -->
+    <p>border-width</p>
+    <div class="box4">
+        Hover over me
+    </div>
+    <br>
+    <hr>
+
+    <!-- border-spacing -->
+    <p>border-spacing</p>
+    <table>
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+
+
+
+
+    <!-- bottom -->
+    <p>bottom</p>
+    <div class="box5">
+        Move me on hover
+    </div>
+    <br>
+    <hr>
+
+
+
+    <!-- clip -->
+    <p>clip</p>
+    <div class="box6">
+        Clip me on hover
+    </div>
+    <br>
+    <hr>
+
+
+
+    <!-- color -->
+    <p>color</p>
+    <div class="box7">
+        Hover over me
+    </div>
+    <br>
+    <hr>
+
+    <!-- font-size -->
+    <p>font-size</p>
+    <div class="box8">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- font-weidth-->
+    <p>font-weidth</p>
+    <div class="box9">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+
+    <!-- height-->
+    <p>height</p>
+    <div class="box10">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+
+    <!-- left-->
+    <p>left</p>
+    <div class="box11">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+
+    <!-- letter-spacing-->
+    <p>letter-spacing</p>
+    <div class="box12">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- padding-->
+    <p>padding</p>
+    <div class="box13">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- right-->
+    <p>right</p>
+    <div class="box14">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- text-indent-->
+    <p>text-indent</p>
+    <div class="box15">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- text-shadow-->
+    <p>text-shadow</p>
+    <div class="box16">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- top-->
+    <p>top</p>
+    <div class="box17">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- width-->
+    <p>width</p>
+    <div class="box18">
+        Resize me on hover
+    </div>
+    <br>
+    <hr>
+
+    <!-- word-spacing-->
+    <p>word-spacing</p>
+    <div class="box19">
+        Space me out on hover
+    </div>
+    <br>
+    <hr>
+</body>
+
+</html>

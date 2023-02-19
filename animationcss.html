@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .bounce {
+  width: 50px; /* Set the width of the ball */
+  height: 50px; /* Set the height of the ball */
+  border-radius: 50%; /* Set the border radius to make it round */
+  background-color: #4CAF50; /* Set the color of the ball */
+  position: relative; /* Set the position to absolute */
+  animation: bounce 1s infinite; /* Add the animation effect */
+}
+
+@keyframes bounce {
+  0% {
+    top: 0; /* Set the top position of the ball */
+    animation-timing-function: ease-out; /* Set the timing function */
+  }
+  50% {
+    top: 190px; /* Set the top position to make the ball bounce */
+    animation-timing-function: ease-in; /* Set the timing function */
+  }
+  100% {
+    top: 0; /* Set the top position back to the original position */
+  }
+}
+
+.fade {
+    width: 50px; /* Set the width of the ball */
+  height: 50px; /* Set the height of the ball */
+  border-radius: 50%; /* Set the border radius to make it round */
+  background-color: #4CAF50; /* Set the color of the ball */
+  position: relative; 
+}
+
+.animation-btn {
+  background-color: #4CAF50; /* Set the button background color */
+  border: none; /* Remove the button border */
+  color: white; /* Set the button text color */
+  padding: 12px 24px; /* Set the button padding */
+  text-align: center; /* Center the button text */
+  font-size: 16px; /* Set the button font size */
+  position: relative; /* Position the button element */
+  animation-name: pulse; /* Specify the animation name */
+  animation-duration: 1s; /* Specify the animation duration */
+  animation-timing-function: ease-in-out; /* Specify the animation timing function */
+  animation-iteration-count: infinite; /* Specify the animation iteration count */
+  animation-direction: alternate; /* Specify the animation direction */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Set the button scale to 1 */
+  }
+  50% {
+    transform: scale(1.2); /* Increase the button scale to 1.2 */
+  }
+  100% {
+    transform: scale(1); /* Set the button scale back to 1 */
+  }
+}
+
+@keyframes animation-name {
+  0% { /* styles for the beginning of the animation */ }
+  50% { /* styles for the middle of the animation */ }
+  100% { /* styles for the end of the animation */ }
+}
+
+/* Apply the animation to an element */
+.element {
+  animation: animation-name duration timing-function delay iteration-count direction fill-mode play-state;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button {
+  animation: fadeIn 20s ease-in-out;
+}
+
+
+
+@keyframes moveBackAndForth {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.box {
+  animation: moveBackAndForth 2s linear infinite;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="bounce"></div> 
+    
+    <div class="fadeIn"></div>
+
+    <button class="animation-btn">Click me!</button>
+
+    <button class="animation-btn">Click me!</button>
+
+    <button class="moveBackAndForth">click </button>
+
+    
+</body>
+</html>
