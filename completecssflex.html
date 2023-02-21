@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Flexbox Cheat Sheet</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        .item {
+            background-color: lightblue;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Flexbox Cheat Sheet</h1>
+    <h2>Flex Container Properties</h2>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Values</th>
+        </tr>
+        <tr>
+            <td>display</td>
+            <td>Sets the display type of the container</td>
+            <td>flex | inline-flex</td>
+        </tr>
+        <tr>
+            <td>flex-direction</td>
+            <td>Sets the direction of the main axis</td>
+            <td>row | row-reverse | column | column-reverse</td>
+        </tr>
+        <tr>
+            <td>flex-wrap</td>
+            <td>Sets whether items should wrap or not</td>
+            <td>nowrap | wrap | wrap-reverse</td>
+        </tr>
+        <tr>
+            <td>justify-content</td>
+            <td>Sets the alignment of items along the main axis</td>
+            <td>flex-start | flex-end | center | space-between | space-around | space-evenly</td>
+        </tr>
+        <tr>
+            <td>align-items</td>
+            <td>Sets the alignment of items along the cross axis</td>
+            <td>flex-start | flex-end | center | baseline | stretch</td>
+        </tr>
+        <tr>
+            <td>align-content</td>
+            <td>Sets the alignment of lines along the cross axis</td>
+            <td>flex-start | flex-end | center | space-between | space-around | stretch</td>
+        </tr>
+    </table>
+
+    <h2>Flex Item Properties</h2>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Values</th>
+        </tr>
+        <tr>
+            <td>order</td>
+            <td>Sets the order of the item</td>
+            <td>number</td>
+        </tr>
+        <tr>
+            <td>flex-grow</td>
+            <td>Sets the amount the item will grow</td>
+            <td>number</td>
+        </tr>
+        <tr>
+            <td>flex-shrink</td>
+            <td>Sets the amount the item will shrink</td>
+            <td>number</td>
+        </tr>
+        <tr>
+            <td>flex-basis</td>
+            <td>Sets the initial size of the item</td>
+            <td>length | auto</td>
+        </tr>
+        <tr>
+            <td>flex</td>
+            <td>Sets the grow, shrink, and basis of
+        </tr>
+    </table>
+</body>
+
+</html>

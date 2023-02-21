@@ -1,0 +1,48 @@
+/* Grid Container Properties */
+
+display: grid;                 /* defines a grid container */
+grid-template-columns: 1fr 1fr; /* defines the number and sizes of the columns */
+grid-template-rows: 1fr 1fr;    /* defines the number and sizes of the rows */
+grid-template-areas:           /* defines a grid template by referencing the names of grid areas */
+  "header header header"
+  "nav main main"
+  "nav footer footer";
+gap: 10px;                     /* shorthand for row-gap and column-gap */
+grid-auto-columns: 50px;       /* specifies the size of columns that are not explicitly set */
+grid-auto-rows: 50px;          /* specifies the size of rows that are not explicitly set */
+grid-auto-flow: column;        /* specifies the auto placement algorithm */
+
+/* Grid Item Properties */
+
+grid-column-start: 2;          /* specifies the start position of an item within the grid column */
+grid-column-end: 4;            /* specifies the end position of an item within the grid column */
+grid-row-start: 1;             /* specifies the start position of an item within the grid row */
+grid-row-end: 3;               /* specifies the end position of an item within the grid row */
+grid-column: 2 / 4;            /* shorthand for grid-column-start and grid-column-end */
+grid-row: 1 / 3;               /* shorthand for grid-row-start and grid-row-end */
+grid-area: header;             /* specifies the name of a grid area */
+justify-self: center;          /* aligns an item inside its grid cell along the row axis */
+align-self: center;            /* aligns an item inside its grid cell along the column axis */
+place-self: center center;     /* shorthand for justify-self and align-self */
+
+/* Grid Line Names */
+
+grid-template-columns:          /* defines the number and sizes of the columns, with named lines */
+  [start] 1fr [col1] 1fr [col2] 1fr [end];
+grid-template-rows:             /* defines the number and sizes of the rows, with named lines */
+  [top] 1fr [row1] 1fr [row2] 1fr [bottom];
+grid-column-start: col1;        /* specifies the start position of an item within the named grid column */
+grid-column-end: col2;          /* specifies the end position of an item within the named grid column */
+grid-row-start: row1;           /* specifies the start position of an item within the named grid row */
+grid-row-end: row2;             /* specifies the end position of an item within the named grid row */
+grid-area: header / col1 / footer / col2; /* specifies the name of a grid area, with named grid lines */
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
